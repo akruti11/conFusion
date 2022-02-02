@@ -45,8 +45,11 @@
           <h1>Ristorante con Fusion</h1>
           <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
         </div>
-        <div class="col-12 col-sm align-self-center">
+        <div class="col-12 col-sm-3 align-self-center">
           <img src="img/logo.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-sm-3 align-self-center">
+            <button class="btn btn-block btn-sm btn-warning" type="button"><a style="color:black; text-decoration:none"href="#reservation"><strong>Reserve Table</strong></a></button>
         </div>
       </div>
     </div>
@@ -73,13 +76,18 @@
 
 
     <div class="row row-content align-items-center">
-      <div class="col-12 col-sm-4 col-md-3">
+      <div class="col-12 col-sm-4 order-sm-first col-md-3">
         <h3>This Month's Promotions</h3>
       </div>
-      <div class="col col-sm col-md">
-        <h2>Weekend Grand Buffet</h2>
-        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per
-          person </p>
+      <div class="col col-sm order-sm-last col-md">
+        <div class="media">
+          <div class="media-body">
+            <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+            <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per
+              person </p>
+          </div>
+          <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/buffet.png" alt="buffet">
+        </div>
       </div>
     </div>
 
@@ -91,14 +99,62 @@
         <div class="media">
           <img class="d-flex mr-3 align-self-center img-thumbnail" src="img/alberto.jpg" alt="alberto">
           <div class="media-body">
-            <h2 class="mt-0" >Alberto Moss</h2>
+            <h2 class="mt-0">Alberto Moss</h2>
             <h4>Executive Chef</h4>
-            <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+            <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.
+            </p>
           </div>
         </div>
 
       </div>
     </div>
+
+    <div class="row row-content align-items-center" id="reservation">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="card">
+          <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+          <div class="card-body">
+            <form class="" action="index.html" method="post">
+              <div class="form-group row">
+                <label class="col-sm-4 col-12 col-form-label" for="no_of_guests">Number of Guests</label>
+                <div class="col-sm-8 col-9 align-self-center">
+                  <input type="radio" name="no_of_guests" id="1" value="1"> <label class="radio_buttons" for="1">1</label>
+                  <input type="radio" name="no_of_guests" id="2" value="2"> <label class="radio_buttons" for="2">2 </label>
+                  <input type="radio" name="no_of_guests" id="3" value="3"> <label class="radio_buttons" for="3">3 </label>
+                  <input type="radio" name="no_of_guests" id="4" value="4"> <label class="radio_buttons" for="4">4 </label>
+                  <input type="radio" name="no_of_guests" id="5" value="5"> <label class="radio_buttons" for="5">5 </label>
+                  <input type="radio" name="no_of_guests" id="0" value="0"> <label class="radio_buttons" for="0">6 </label>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="date&time" class="col-sm-4 col-12 col-form-label">Date and Time</label>
+                <div class="col-sm-3 col-12">
+                  <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                </div>
+                <div class="col-sm-3 col-12">
+                  <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="offset-sm-4 col-sm-2">
+                  <button type="submit" class="btn btn-primary" name="button">Reserve</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+
   </div>
 
   <footer class="footer">
